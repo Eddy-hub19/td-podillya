@@ -1,0 +1,110 @@
+<div class="volunteer-form">
+  <form action="https://formspree.io/f/xeoarlrj" method="POST">
+    <h4 class="volunteer-form__subtitle">Якщо ви не байдужі, заповніть форму для зворотнього зв’язку</h4>
+
+    <div class="form__group">
+      <label for="name" class="form__label">Ім’я Прізвище</label>
+      <input type="text" class="form__input" id="name" name="name" placeholder="Вкажіть ваше ім’я та прізвище"
+        required />
+    </div>
+
+    <div class="form__group">
+      <label for="email" class="form__label">Email</label>
+      <input type="email" class="form__input" id="email" name="email" placeholder="Вкажіть ваш email" required />
+    </div>
+
+    <div class="form__group">
+      <label for="phone" class="form__label">Телефон</label>
+      <input type="tel" class="form__input" id="phone" name="phone" placeholder="+380 00 000 00 00" required />
+    </div>
+
+    <div class="form__group">
+      <label for="dropdown-button" class="form__label">Професія</label>
+    </div>
+    <div class="custom-select">
+      <button id="dropdown-button" class="select-button" role="combobox" aria-label="select button"
+        aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
+        <span class="selected-value">Бухгалтер</span>
+        <div>
+          <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9L12 15L18 9" stroke="#1D252B" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+      </button>
+      <ul class="select-dropdown hidden" role="listbox" id="select-dropdown" aria-labelledby="dropdown-button">
+        <li role="option">Волонтер</li>
+        <li role="option">Допомога</li>
+        <li role="option">Партнерство</li>
+        <li role="option">Спонсорство</li>
+        <li role="option">Підтримка</li>
+        <li role="option">Пожертва</li>
+        <li role="option">Благодійність</li>
+      </ul>
+    </div>
+
+    <!-- Скрытое поле для передачи выбранной профессии -->
+    <input type="hidden" id="selected-profession" name="profession" />
+
+    <div class="form__group">
+      <label for="message" class="form__label">Коментар</label>
+      <textarea class="textarea" name="message" rows="10" placeholder="Залиште свій коментар" required></textarea>
+    </div>
+
+    <button class="form-btn button primary" type="submit">Надіслати
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M9 18L15 12L9 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+
+    </button>
+  </form>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const customSelect = document.querySelector(".custom-select");
+    if (!customSelect) return; // Если .custom-select нет на странице, ничего не делаем
+
+    const selectButton = customSelect.querySelector(".select-button");
+    const dropdown = customSelect.querySelector(".select-dropdown");
+    const options = dropdown.querySelectorAll("li");
+    const selectedValue = selectButton.querySelector(".selected-value");
+    const hiddenInput = document.getElementById("selected-profession");
+    const arrow = selectButton.querySelector(".arrow");
+
+    // Если скрытое поле с id "selected-profession" не существует, прекращаем выполнение
+    if (!hiddenInput) {
+      console.error('Элемент с id "selected-profession" не найден!');
+      return;
+    }
+
+    // Открытие/закрытие дропдауна
+    selectButton.addEventListener("click", () => {
+      const isOpen = dropdown.classList.contains("hidden");
+      dropdown.classList.toggle("hidden", !isOpen);
+      // Меняем направление стрелки
+      arrow.style.transform = isOpen ? "rotate(180deg)" : "rotate(0deg)";
+    });
+
+    // Обработка выбора опции
+    options.forEach((option) => {
+      option.addEventListener("click", () => {
+        const value = option.textContent.trim();
+        selectedValue.textContent = value;
+        hiddenInput.value = value;  // Установка значения в скрытое поле
+        dropdown.classList.add("hidden"); // Закрыть дропдаун после выбора
+        arrow.style.transform = "rotate(0deg)"; // Вернуть стрелку вверх
+      });
+    });
+
+    // Закрытие дропдауна при клике вне его
+    document.addEventListener("click", (e) => {
+      if (!customSelect.contains(e.target)) {
+        dropdown.classList.add("hidden");
+        arrow.style.transform = "rotate(0deg)"; // Вернуть стрелку вверх
+      }
+    });
+  });
+
+</script>

@@ -1,0 +1,90 @@
+.about-us {
+  .list {
+    list-style: disc;
+    padding-left: 30px;
+  }
+
+  .about-descr {
+    max-width: 672px;
+    margin-top: 24px;
+  }
+}
+
+.about-us-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about-us-wrap {
+  display: flex;
+  gap: 24px;
+}
+
+.meta-goal {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #4e5f6e;
+
+  font-family: $font-primary;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+
+  margin-bottom: 8px;
+}
+
+.about-us-paragraph {
+  max-width: 672px;
+  align-self: stretch;
+  color: #fe9400;
+  font-family: $font-secondary;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 24px;
+
+  @include tablet {
+    font-size: 20px;
+  }
+  @include mobile {
+    font-size: 18px;
+  }
+  @include small-mobile {
+    font-size: 16px;
+  }
+  @include tiny {
+    font-size: 14px;
+  }
+}
+
+.about-us-text {
+  color: #1d252b;
+  font-family: $font-secondary;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 672px;
+  padding: 24px;
+  border-radius: 16px;
+  background: #e8ecf2;
+  margin-bottom: 24px;
+  gap: 8px;
+
+  @include tablet {
+    font-size: 18px;
+  }
+  @include mobile {
+    font-size: 16px;
+  }
+  @include small-mobile {
+    font-size: 14px;
+  }
+  @include tiny {
+    font-size: 12px;
+  }
+}

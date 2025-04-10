@@ -1,0 +1,103 @@
+<section class="helper-form">
+  <div class="container">
+    <h2 class="title2 helper-form__title">Волонтерство</h2>
+    <div class="helper-form__wrapper">
+
+      <div class="helper-form__info">
+
+        <div class="helper-form__content">
+          <p><strong class="strong">В яких сферах діяльності організації ви б могли допомагати як волонтер:</strong></p>
+          <ul class="helper-form__list">
+            <li>
+              <strong>Акція «Естафета Добра»</strong> (збір благодійної допомоги у супермаркетах)<br>
+              • Четвер, п’ятниця, субота 11:00 – 19:00 (по 2 – 4 години на зміні)
+            </li>
+            <li>
+              <strong>Годування безхатченків</strong><br>
+              • Понеділок, середа 13:00 – 14:00<br>
+              • Четвер, 15:00 – 16:00
+            </li>
+            <li>
+              <strong>Робота з дітьми</strong><br>
+              • Дитяча школа в неділю (11:30–13:00)<br>
+              • Дитячий час в середу (18:15–19:00)
+            </li>
+            <li><strong>Робота в сфері надання допомоги ВПО</strong></li>
+            <li><strong>Фандрайзинг</strong> (збір коштів у благодійників по місту)</li>
+          </ul>
+        </div>
+
+        <p class="helper-form__descr">Наша команда шукає надійних, небайдужих та активних людей, які б долучились до
+          волонтерської діяльності та
+          допомагали із реалізацією різноманітних проектів в місті Хмельницькому..</p>
+        <p class="helper-form__text"><strong>Саме ти можеш приєднатись до доброї справи!</strong></p>
+      </div>
+
+      <form class="helper-form__form">
+        <label class="helper-form__label">
+          <span>Ім’я Прізвище</span>
+          <input type="text" name="fullname" required class="helper-form__input"
+            placeholder="Вкажіть ваше ім’я та прізвище" autocomplete="name">
+        </label>
+
+        <label class="helper-form__label">
+          <span>Телефон</span>
+          <input type="tel" name="phone" required class="helper-form__input" placeholder="+380 00 000 00 00"
+            autocomplete="tel">
+        </label>
+
+        <label class="helper-form__label">
+          <span>Оберіть область діяльності</span>
+          <select name="field" required class="helper-form__select">
+            <option value="" disabled selected>Оберіть область</option>
+            <option value="estafeta">Акція "Естафета добра"</option>
+            <option value="volunteering">Волонтерство</option>
+            <option value="finance">Фінансова підтримка</option>
+            <option value="media">Медіапідтримка</option>
+          </select>
+        </label>
+
+        <label class="helper-form__label">
+          Інша волонтерська робота
+          <textarea name="comment" rows="10" class="helper-form__textarea"
+            placeholder="Залиште свій коментар"></textarea>
+        </label>
+
+        <fieldset class="helper-form__fieldset">
+          <legend class="helper-form__legend">Який час ви можете присвятити волонтерству?*</legend>
+
+          <label class="helper-form__option">
+            <input type="radio" name="time" value="evening" required> Вечірні години (будні)
+          </label>
+          <label class="helper-form__option">
+            <input type="radio" name="time" value="day"> Денні години (будні)
+          </label>
+          <label class="helper-form__option">
+            <input type="radio" name="time" value="morning"> Ранкові години (будні)
+          </label>
+          <label class="helper-form__option">
+            <input type="radio" name="time" value="weekend"> Вихідні дні
+          </label>
+          <label class="helper-form__option">
+            <input type="radio" name="time" value="anytime"> Не можу сказати однозначно, маю гнучкий графік
+          </label>
+        </fieldset>
+
+        <div class="flex-bottom">
+
+          <p class="text-volonteur">Обов’язкові поля позначені *</p>
+
+          <button type="submit" class="button primary helper-form__submit">
+            Надіслати запит
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M9 18L15 12L9 6" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>

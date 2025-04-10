@@ -1,0 +1,86 @@
+/* Основной контейнер слайдера */
+.swiper {
+  width: 100%; /* Пропорции для ширины */
+  padding: 20px 0; /* Отступы сверху и снизу */
+}
+
+/* Слайды внутри контейнера */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Изображения внутри слайдов */
+.swiper-slide img {
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Кастомная пагинация */
+.swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 16px;
+  background: #c8cfd6;
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.04);
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  width: 6px;
+  height: 6px;
+  border-radius: 16px;
+  background: #fe9400;
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.04);
+  transform: scale(1.2); /* Увеличение активного элемента */
+}
+
+/* Кастомные кнопки навигации */
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: rgba(0, 0, 0, 0.4); /* Цвет фона кнопок */
+  border-radius: 50%;
+  width: 40px; /* Размер кнопок */
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; /* Цвет стрелок */
+  font-size: 20px;
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.1); /* Тень кнопок */
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #fe9400; /* Цвет кнопки при наведении */
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.2); /* Более яркая тень */
+}
+
+/* Стрелки внутри кнопок */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px; /* Размер стрелок */
+}
+
+/* Настройки для общего контейнера */
+.swiper {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}

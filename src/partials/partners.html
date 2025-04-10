@@ -1,0 +1,111 @@
+<section class="partners section">
+  <div class="container">
+    <h3 class="title-h3 mb-32">Наші партнери</h3>
+
+    <!-- swiper 2 -->
+    <div class="swiper partners-swiper-2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/partners/partner-1.png" alt="partner-1">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/partners/partner-2.png" alt="partner-2">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/partners/partner-3.png" alt="partner-3">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/partners/partner-4.png" alt="partner-4">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/partners/partner-5.png" alt="partner-5">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/partners/partner-6.png" alt="partner-6">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/partners/partner-1.png" alt="partner-1">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/partners/partner-2.png" alt="partner-2">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/partners/partner-3.png" alt="partner-3">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/partners/partner-4.png" alt="partner-4">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/partners/partner-5.png" alt="partner-5">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/partners/partner-6.png" alt="partner-6">
+        </div>
+      </div>
+
+      <!-- Пагинация -->
+      <div class="custom-swiper-pagination"></div>
+
+      <!-- Кнопки -->
+      <div class="swiper-button-prev partners-swiper-2-prev"></div>
+      <div class="swiper-button-next partners-swiper-2-next"></div>
+    </div>
+
+
+    <script>
+      const swiper2 = new Swiper('.partners-swiper-2', {
+        slidesPerView: 6,
+        spaceBetween: 24,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+        },
+
+        pagination: {
+          el: '.custom-swiper-pagination',
+          clickable: true,
+        },
+
+        navigation: {
+          nextEl: '.partners-swiper-2-next',
+          prevEl: '.partners-swiper-2-prev',
+        },
+        breakpoints: {
+          1400: { slidesPerView: 5 },
+          768: { slidesPerView: 3 },
+          480: { slidesPerView: 2 },
+          0: { slidesPerView: 1 }
+        }
+      });
+
+    </script>
+
+  </div>
+</section>
+
+
+<section class="partner-banner">
+  <div class="container">
+    <div class="partner-banner-wrapper">
+      <p class="partner-banner__text">
+        Запрошуємо Вас стати нашими партнерами в добрих справах і разом будемо допомагати людям, дарувати радість і
+        турботу.
+      </p>
+      <div class="partner-banner__buttons">
+        <a href="#" class="button primary">Стати партнером
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M9 18.8501L15 12.8501L9 6.8501" stroke="white" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a href="./page-partners.html" class="button tertiary">Дивитись усіх партнерів
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M9 18.8501L15 12.8501L9 6.8501" stroke="#121212" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

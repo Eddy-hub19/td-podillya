@@ -1,0 +1,73 @@
+<section class="reports section">
+  <div class="container">
+    <h3 class="title-h3 mb-32">Звіти нашої діяльності</h3>
+
+    <!-- Slider main container -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/reports/reports-1.jpg" alt="report1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/reports/reports-2.jpg" alt="report2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/reports/reports-3.jpg" alt="report3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/reports/reports-3.jpg" alt="report3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/reports/reports-3.jpg" alt="report3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/reports/reports-3.jpg" alt="report3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/reports/reports-3.jpg" alt="report3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/reports/reports-3.jpg" alt="report3" />
+        </div>
+      </div>
+
+      <!-- Пагинация -->
+      <div class="custom-swiper-pagination"></div>
+
+      <!-- Кнопки навигации -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+
+    <!-- Initialize Swiper -->
+    <script>
+      const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: '.custom-swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+        breakpoints: {
+          1400: { slidesPerView: 3 },
+          1200: { slidesPerView: 3 },
+          1000: { slidesPerView: 2 },
+          768: { slidesPerView: 2 },
+          480: { slidesPerView: 1 },
+          0: { slidesPerView: 1 }
+        }
+      });
+    </script>
+
+  </div>
+</section>

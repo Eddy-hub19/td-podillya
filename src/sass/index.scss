@@ -1,2 +1,157 @@
-@import './common';
-@import './example';
+@import "./common";
+@import "./swiper";
+@import "./variables";
+@import "./mixins";
+@import "./grid";
+@import "./project";
+@import "./margin";
+@import "./header";
+@import "./hero";
+@import "./abous-us";
+@import "./our-projects";
+// @import "./reports";
+@import "./volunteer";
+@import "./partners";
+@import "./footer";
+@import "./form";
+@import "./donate";
+@import "./copy-alert";
+@import "./partners-listing";
+
+@import "./responsive";
+@import "./burger";
+
+@import "./news";
+
+.container {
+  max-width: 1368px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @include laptop {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  @include tablet {
+    max-width: 768px;
+    padding: 0 16px;
+  }
+
+  @include mobile {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  @include small-mobile {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  @include tiny {
+    max-width: 100%;
+    padding: 0 12px;
+  }
+}
+
+.footer .content {
+  max-width: 1368px;
+  margin: 0 auto;
+}
+
+.current {
+  color: $primary !important;
+  border-bottom: 1px solid #fe9400;
+}
+
+.icon {
+  display: inline-block;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.section {
+  padding-top: 100px;
+
+  @include tablet {
+    padding-top: 50px;
+  }
+
+  @include mobile {
+    padding-top: 50px;
+  }
+
+  @include small-mobile {
+    padding-top: 40px;
+  }
+  @include tiny {
+    padding-top: 32px;
+  }
+}
+
+.title2 {
+  color: #1d252b;
+  font-family: $font-secondary;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+
+  @include tablet {
+    font-size: 40px;
+  }
+  @include mobile {
+    font-size: 32px;
+  }
+  @include small-mobile {
+    font-size: 28px;
+  }
+  @include tiny {
+    font-size: 24px;
+  }
+}
+
+.title-h3 {
+  color: #1d252b;
+  font-family: $font-secondary;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+
+  @include tablet {
+    font-size: 32px;
+  }
+  @include mobile {
+    font-size: 28px;
+  }
+  @include small-mobile {
+    font-size: 24px;
+  }
+  @include tiny {
+    font-size: 20px;
+  }
+}
+
+.item {
+  color: #1d252b;
+  font-family: $font-primary;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.descr {
+  color: #1d252b;
+  font-family: $font-primary;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.bold {
+  font-weight: 700;
+}

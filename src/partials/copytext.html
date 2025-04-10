@@ -1,0 +1,92 @@
+<div class="template">
+
+  <h4 class="template__subtitle">Підтримайте громадську організацію</h4>
+  <h5 class="template__title">“Територія добра Поділля”</h5>
+  <div class="template__text">
+    Приєднуйтесь до нас у творенні кращого, добрішого світу для усіх! Ваша підтримка – ключ до позитивних змін та
+    допомоги тим, хто її потребує.
+  </div>
+
+  <div class="block">
+    <h5 class="block__title">Переказ на карту</h5>
+    <span class="label">Призначення платежу: <strong>Благодійні пожертви</strong></span>
+    <div class="value-container">
+      <span class="value" id="card">5169 3305 2117 6468</span>
+      <button class="copy-btn" onclick="copyText(this)">Скопіювати
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M18.4615 10H11.5385C10.6888 10 10 10.6888 10 11.5385V18.4615C10 19.3112 10.6888 20 11.5385 20H18.4615C19.3112 20 20 19.3112 20 18.4615V11.5385C20 10.6888 19.3112 10 18.4615 10Z"
+            stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M6.30769 14H5.53846C5.13044 14 4.73912 13.8379 4.4506 13.5494C4.16209 13.2609 4 12.8696 4 12.4615V5.53846C4 5.13044 4.16209 4.73912 4.4506 4.4506C4.73912 4.16209 5.13044 4 5.53846 4H12.4615C12.8696 4 13.2609 4.16209 13.5494 4.4506C13.8379 4.73912 14 5.13044 14 5.53846V6.30769"
+            stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="block">
+    <h5>Paypal</h5>
+    <span class="label">Обов’язковий коментар: <strong>Благодійні пожертви</strong></span>
+    <div class="value-container">
+      <span class="value" id="email">andreyandreychyk@ukr.net</span>
+      <button class="copy-btn" onclick="copyText(this)">Скопіювати
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M18.4615 10H11.5385C10.6888 10 10 10.6888 10 11.5385V18.4615C10 19.3112 10.6888 20 11.5385 20H18.4615C19.3112 20 20 19.3112 20 18.4615V11.5385C20 10.6888 19.3112 10 18.4615 10Z"
+            stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M6.30769 14H5.53846C5.13044 14 4.73912 13.8379 4.4506 13.5494C4.16209 13.2609 4 12.8696 4 12.4615V5.53846C4 5.13044 4.16209 4.73912 4.4506 4.4506C4.73912 4.16209 5.13044 4 5.53846 4H12.4615C12.8696 4 13.2609 4.16209 13.5494 4.4506C13.8379 4.73912 14 5.13044 14 5.53846V6.30769"
+            stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+    <div class="value-container">
+      <span class="value" id="phone">+380994964494</span>
+      <button class="copy-btn" onclick="copyText(this)">Скопіювати
+
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M18.4615 10H11.5385C10.6888 10 10 10.6888 10 11.5385V18.4615C10 19.3112 10.6888 20 11.5385 20H18.4615C19.3112 20 20 19.3112 20 18.4615V11.5385C20 10.6888 19.3112 10 18.4615 10Z"
+            stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M6.30769 14H5.53846C5.13044 14 4.73912 13.8379 4.4506 13.5494C4.16209 13.2609 4 12.8696 4 12.4615V5.53846C4 5.13044 4.16209 4.73912 4.4506 4.4506C4.73912 4.16209 5.13044 4 5.53846 4H12.4615C12.8696 4 13.2609 4.16209 13.5494 4.4506C13.8379 4.73912 14 5.13044 14 5.53846V6.30769"
+            stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="block">
+    <h5>LiqPay</h5>
+    <div class="value-container">
+      <span class="value" id="liqpay">https://www.liqpay.EN/checkout/i66389058818</span>
+    </div>
+  </div>
+
+  <div id="copy-alert">Скопійовано!</div>
+</div>
+
+<script>
+  function showCopyAlert() {
+    const alertBox = document.getElementById('copy-alert');
+    alertBox.classList.add('show');
+    setTimeout(() => {
+      alertBox.classList.remove('show');
+    }, 2000);
+  }
+
+  function copyText(buttonElement) {
+    const container = buttonElement.closest('.value-container');
+    const values = container.querySelectorAll('.value');
+    const combinedText = Array.from(values).map(v => v.innerText).join(' ');
+
+    navigator.clipboard.writeText(combinedText).then(() => {
+      showCopyAlert();
+    }).catch(err => {
+      console.error('Clipboard error:', err);
+    });
+  }
+</script>

@@ -1,0 +1,41 @@
+<section class="donate section" id="donate">
+  <div class="container">
+
+    <div class="donage-wrap">
+
+      <div class="wrap">
+        <include src="./partials/copytext.html"></include>
+      </div>
+
+      <div class="donate-checkout">
+        <div id="liqpay_checkout"></div>
+      </div>
+    </div>
+
+
+    <!-- LiqPayCheckoutCallback  -->
+    <script>
+      window.LiqPayCheckoutCallback = function () {
+        LiqPayCheckout.init({
+          data: "eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiIxMDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoi0JTQvtCx0YDQvtCy0ZbQu9GM0L3RliDQv9C+0LbQtdGA0YLQstGD0LLQsNC90L3RjyIsInB1YmxpY19rZXkiOiJpMzI0MTM3OTE5MDQiLCJsYW5ndWFnZSI6InJ1In0=",
+          signature: "ror3gA8kLSCLYJl4tMI29/gmwQc=",
+          embedTo: "#liqpay_checkout",
+          mode: "embed", // embed || popup,
+        })
+          .on("liqpay.callback", function (data) {
+            // console.log(data.status)
+            // console.log(data)
+          })
+          .on("liqpay.ready", function (data) {
+            // ready
+          })
+          .on("liqpay.close", function (data) {
+            // close
+          })
+      }
+    </script>
+
+    <!-- Scripts  -->
+    <script src="//static.liqpay.ua/libjs/checkout.js" async></script>
+  </div>
+</section>

@@ -1,0 +1,79 @@
+// Гибкий контейнер с гридом
+.grid {
+  display: grid;
+  gap: 24px;
+
+  // Стандартные колонки для больших экранов
+  &.cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &.cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // Респонсивность для экранов шириной менее 1200px
+  @include tablet {
+    &.cols-4 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &.cols-3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &.cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  // Респонсивность для экранов шириной менее 768px
+  @include mobile {
+    &.cols-4,
+    &.cols-3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &.cols-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // Для очень маленьких экранов
+  @include small-mobile {
+    &.cols-4,
+    &.cols-3,
+    &.cols-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Гибкий контейнер с флексом
+
+.flex {
+  display: flex;
+
+  &.space-between {
+    justify-content: space-between;
+  }
+
+  &.start {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &.center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+}

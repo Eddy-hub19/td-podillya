@@ -1,0 +1,131 @@
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 36px 36px;
+  border-radius: 12px 12px 0 0;
+
+  .logo-text {
+    display: flex;
+
+    &__title {
+      color: #fff;
+
+      font-family: $font-primary;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    &__subtitle {
+      color: #fff;
+      font-family: $font-primary;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #4e5f6e;
+  }
+
+  &__logo {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 32px;
+
+    &-link {
+      color: #fff;
+      font-family: $font-primary;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.5;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #fe9400;
+        border-bottom: 1px solid #fe9400;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__button {
+    background: #fff;
+    color: #111;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      background: #ddd;
+    }
+  }
+
+  &__lang span {
+    display: flex;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 24px;
+
+    color: #c8cfd6;
+
+    font-family: $font-primary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 10px;
+    color: white;
+
+    a img {
+      height: 20px;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .copyright {
+    color: #c8cfd6;
+    font-family: $font-primary;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
