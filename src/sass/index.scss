@@ -45,11 +45,13 @@
 
   @include small-mobile {
     max-width: 100%;
+    max-width: 400px;
     padding: 0 16px;
   }
 
   @include tiny {
     max-width: 100%;
+    max-width: 350px;
     padding: 0 12px;
   }
 }
