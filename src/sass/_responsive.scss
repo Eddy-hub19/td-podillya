@@ -5,6 +5,10 @@
     max-width: none;
   }
 
+  nav {
+    flex-wrap: nowrap;
+  }
+
   .nav-list {
     justify-content: center;
     gap: 15px;
