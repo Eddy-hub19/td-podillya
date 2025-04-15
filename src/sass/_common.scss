@@ -8,6 +8,22 @@
   box-sizing: border-box !important;
 }
 
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  color: #1d252b;
+  background: #fbfcfc;
+}
+
+// main {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+// }
+
 html,
 body {
   height: 100%;
@@ -15,24 +31,8 @@ body {
   scroll-behavior: smooth;
 }
 
-body {
-  // display: grid;
-  // grid-template-rows: 1fr auto;
-  margin: 0;
-  padding: 0;
-  font-family: "Manrope", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #1d252b;
-  background: #fbfcfc;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
+.main {
+  display: grid;
+  align-content: space-between;
   min-height: 100vh;
-}
-
-html {
-  scroll-behavior: smooth;
 }
