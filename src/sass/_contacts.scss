@@ -3,6 +3,42 @@
   .contacts-wrap {
     display: flex;
     justify-content: space-between;
+    gap: 24px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    @include small-mobile {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    @include tiny {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  iframe {
+    width: 687px !important;
+    height: 502px;
+
+    @include mobile {
+      width: 100% !important;
+      height: 502px !important;
+    }
+
+    @include small-mobile {
+      width: 100% !important;
+      height: 400px !important;
+    }
+
+    @include tiny {
+      width: 100% !important;
+      height: 400px !important;
+    }
   }
 
   .title2 {
@@ -28,6 +64,7 @@
       font-style: normal;
       font-weight: 400;
       line-height: 1.5;
+      word-break: break-word;
     }
   }
 

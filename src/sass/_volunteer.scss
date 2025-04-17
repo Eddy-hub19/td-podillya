@@ -110,6 +110,16 @@
   &__list {
     padding-left: 20px;
 
+    @include mobile {
+      padding-left: 0;
+    }
+    @include small-mobile {
+      padding-left: 0;
+    }
+    @include tiny {
+      padding-left: 0;
+    }
+
     li {
       margin-bottom: 16px;
     }
