@@ -1,4 +1,10 @@
 .about-us {
+
+  // .title-h3 {
+  //   margin-top: 72px;
+  //   margin-bottom: 24px;
+  // }
+
   .list {
     list-style: disc;
     padding-left: 30px;
@@ -86,5 +92,14 @@
   }
   @include tiny {
     font-size: 12px;
+  }
+}
+
+iframe {
+  width: 100% !important;
+  
+  @include mobile {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
