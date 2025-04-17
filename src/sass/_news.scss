@@ -46,6 +46,22 @@
     align-items: flex-start;
     gap: 24px;
     margin: 24px 0;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    @include small-mobile {
+      flex-direction: column;
+    }
+
+    @include tiny {
+      flex-direction: column;
+    }
   }
 
   &-btn {

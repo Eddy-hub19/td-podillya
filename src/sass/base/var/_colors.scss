@@ -81,7 +81,24 @@ $text-light: #fe9400;
     }
   }
 
-  svg{
+  svg {
     width: auto;
+    cursor: pointer;
+
+    @media (max-width: 480px) {
+      width: 16px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 8px 10px;
+    font-size: 12px !important;
+    word-wrap: normal;
+    gap: 4px;
+
+    &.tertiary {
+      padding: 8px 10px;
+      font-size: 13px;
+    }
   }
 }
