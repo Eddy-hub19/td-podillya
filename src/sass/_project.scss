@@ -15,6 +15,9 @@ $gray-light: #e8ecf2;
   }
 
   &:hover {
+    border-radius: 16px;
+    border: 1px solid #fe9400;
+    background: #fff;
     box-shadow: 0px 0px 24px 10px rgba(0, 0, 0, 0.08);
   }
 }
@@ -22,8 +25,12 @@ $gray-light: #e8ecf2;
 // projects
 
 .projects {
-  margin-top: 32px;
   position: relative;
+
+  .title2 {
+    margin-top: 72px;
+    margin-bottom: 24px;
+  }
 }
 
 .projects .grid {
